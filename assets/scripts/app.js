@@ -58,3 +58,22 @@ const extendedUser = {
 }
 
 console.log(extendedUser);
+
+// Using functions as values
+
+function handleTimeout(){
+  console.log("Timed out named!");
+}
+
+// Example 1 - we are using handleTimeout as value
+// note there is no () after handleTimeout otherwise we 
+// would be calling the function
+
+setTimeout(handleTimeout,3000)
+
+// Example 2 - we are using arrow notation to define
+// an anonymous function within the setTimeout call
+
+setTimeout(() => console.log("Timed out anon!"), 3000)
+
+// In both ex1 and 2 above, the effect is the same
